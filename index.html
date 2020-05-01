@@ -174,8 +174,8 @@
       
         <h1 id="微信小程序开发demo介绍-番茄时钟"><a href="#微信小程序开发demo介绍-番茄时钟" class="headerlink" title="微信小程序开发demo介绍:番茄时钟"></a>微信小程序开发demo介绍:番茄时钟</h1><h2 id="编写语法markdown"><a href="#编写语法markdown" class="headerlink" title="编写语法markdown"></a>编写语法markdown</h2><h4 id="markdown标记语言语法详解请看："><a href="#markdown标记语言语法详解请看：" class="headerlink" title="markdown标记语言语法详解请看："></a>markdown标记语言语法详解请看：</h4><p>菜鸟教程 <a href="https://www.runoob.com/markdown/md-link.html" target="_blank" rel="noopener">MarkDown</a> </p>
 <h4 id="微信开发文档查看："><a href="#微信开发文档查看：" class="headerlink" title="微信开发文档查看："></a>微信开发文档查看：</h4><p>微信开发 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/api.html" target="_blank" rel="noopener">Wechat</a></p>
-<h3 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h3><p>  给大家介绍一下一个简单的微信小程序是怎么被我们这些程序猿开发出来的，github上也有很多demo，其实入门非常简单。<br>  开发环境：微信开发工具稳定版，下载最新版最好。非常赞，因为它提供了模拟器还有真机调试，可以实现在电脑上编程，在手机上实时模拟。<br>  对于刚刚掌握编程语言的同学，没有其它计算机专业知识的也可以开发出一个简单微信小程序。比如简易计算器，番茄时钟等</p>
-<p>  这里先给出番茄时钟的github项目地址 <a href="https://github.com/kraaas/timer" target="_blank" rel="noopener">番茄时钟</a> 轻量级，对项目环境几乎没有要求，非常适合入门。<br>  我重点讲几个文件作用：</p>
+<h3 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h3><pre><code>给大家介绍一下一个简单的微信小程序是怎么被我们这些程序猿开发出来的，github上也有很多demo，其实入门非常简单。</code></pre><p>  开发环境：微信开发工具稳定版，  下载最新版最好。非常赞，因为它提供了模拟器还有真机调试，可以实现在电脑上编程，在手机上实时模拟。<br>  对于刚刚掌握编程语言的同学，没有其它计算机专业知识的也可以开发出一个简单微信小程序。比如简易计算器，番茄时钟等</p>
+<pre><code>这里先给出番茄时钟的github项目地址 [番茄时钟](https://github.com/kraaas/timer) 轻量级，对项目环境几乎没有要求，非常适合入门。</code></pre><p>  我重点讲几个文件作用：</p>
 <h3 id="app-json-整个小程序-软件的配置文件，全局配置，配置可以读取的文件，颜色，导航栏等。小程序也是软件，是一种基于微信平台的特殊软件，轻量级。当用户点击启动时，微信通过链接云端下载该软件的文件包，自动解压运行。非常便利。"><a href="#app-json-整个小程序-软件的配置文件，全局配置，配置可以读取的文件，颜色，导航栏等。小程序也是软件，是一种基于微信平台的特殊软件，轻量级。当用户点击启动时，微信通过链接云端下载该软件的文件包，自动解压运行。非常便利。" class="headerlink" title="app.json 整个小程序 软件的配置文件，全局配置，配置可以读取的文件，颜色，导航栏等。小程序也是软件，是一种基于微信平台的特殊软件，轻量级。当用户点击启动时，微信通过链接云端下载该软件的文件包，自动解压运行。非常便利。"></a>app.json 整个小程序 软件的配置文件，全局配置，配置可以读取的文件，颜色，导航栏等。小程序也是软件，是一种基于微信平台的特殊软件，轻量级。当用户点击启动时，微信通过链接云端下载该软件的文件包，自动解压运行。非常便利。</h3><p><strong><em>程序</em></strong><br>        <img src="/images/app.json.PNG" alt="alt"><br>        {<br>        “pages”: [<br>            “pages/index/index”,<br>            “pages/logs/logs”,<br>            “pages/setting/setting”<br>        ],<br>        “window”: {<br>            “backgroundTextStyle”: “light”,<br>            “navigationBarBackgroundColor”: “#3197ed”,<br>            “navigationBarTitleText”: “”,<br>            “navigationBarTextStyle”: “white”<br>        },<br>        “tabBar”: {<br>            “color”: “#dddddd”,<br>            “selectedColor”: “#3cc51f”,<br>            “borderStyle”: “black”,<br>            “backgroundColor”: “#ffffff”,<br>            “list”: [<br>            {<br>                “pagePath”: “pages/index/index”,<br>                “iconPath”: “image/wechat.png”,<br>                “selectedIconPath”: “image/wechatHL.png”,<br>                “text”: “主页”<br>            },<br>            {<br>                “pagePath”: “pages/logs/logs”,<br>                “iconPath”: “image/wechat.png”,<br>                “selectedIconPath”: “image/wechatHL.png”,<br>                “text”: “记录”<br>            },<br>            {<br>                “pagePath”: “pages/setting/setting”,<br>                “iconPath”: “image/wechat.png”,<br>                “selectedIconPath”: “image/wechatHL.png”,<br>                “text”: “设置”<br>            }<br>            ]<br>        },<br>        “style”:”v2”,<br>        “sitemapLocation”: “sitemap.json”<br>        }</p>
 <h3 id="pages-是小程序功能实现的核心部分-index是最主要的一页。index-wxml-是负责实现小程序index-第一个页面的组件的，比如圆框，数字显示，文字框等。"><a href="#pages-是小程序功能实现的核心部分-index是最主要的一页。index-wxml-是负责实现小程序index-第一个页面的组件的，比如圆框，数字显示，文字框等。" class="headerlink" title="pages 是小程序功能实现的核心部分;index是最主要的一页。index.wxml 是负责实现小程序index 第一个页面的组件的，比如圆框，数字显示，文字框等。"></a>pages 是小程序功能实现的核心部分;index是最主要的一页。index.wxml 是负责实现小程序index 第一个页面的组件的，比如圆框，数字显示，文字框等。</h3><p> <strong><em>程序</em></strong><br> <img src="/images/index.wxml.PNG" alt="alt"><br>            <!-- suggest use the English to notice the meaning --></p>
 <pre><code>&lt;view class=&quot;container timer {{isRuning ? 'timer--runing': ''}}&quot;&gt;
@@ -551,7 +551,7 @@ saveLog: function(log) {
     logs.unshift(log)
     wx.setStorageSync(&apos;logs&apos;, logs)
 }
-})</code></pre><h3 id="小编查了一下淘宝上开发小程序的价格，根据技术难度从100到2000元不等，而这技术难度并不是很大，所以各位加油吧，学了就可以自己接私活了挣零花钱了。"><a href="#小编查了一下淘宝上开发小程序的价格，根据技术难度从100到2000元不等，而这技术难度并不是很大，所以各位加油吧，学了就可以自己接私活了挣零花钱了。" class="headerlink" title="小编查了一下淘宝上开发小程序的价格，根据技术难度从100到2000元不等，而这技术难度并不是很大，所以各位加油吧，学了就可以自己接私活了挣零花钱了。"></a>小编查了一下淘宝上开发小程序的价格，根据技术难度从100到2000元不等，而这技术难度并不是很大，所以各位加油吧，学了就可以自己接私活了挣零花钱了。</h3><p><strong><em>淘宝</em></strong><br> <img src="/money.PNG" alt="alt"></p>
+})</code></pre><h3 id="小编查了一下淘宝上开发小程序的价格，根据技术难度从100到2000元不等，而这技术难度并不是很大，所以各位加油吧，学了就可以自己接私活了挣零花钱了。"><a href="#小编查了一下淘宝上开发小程序的价格，根据技术难度从100到2000元不等，而这技术难度并不是很大，所以各位加油吧，学了就可以自己接私活了挣零花钱了。" class="headerlink" title="小编查了一下淘宝上开发小程序的价格，根据技术难度从100到2000元不等，而这技术难度并不是很大，所以各位加油吧，学了就可以自己接私活了挣零花钱了。"></a>小编查了一下淘宝上开发小程序的价格，根据技术难度从100到2000元不等，而这技术难度并不是很大，所以各位加油吧，学了就可以自己接私活了挣零花钱了。</h3><p><strong><em>淘宝</em></strong><br> <img src="/images/money.png" alt="alt"></p>
 
       
 
@@ -560,6 +560,17 @@ saveLog: function(log) {
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">wechat</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -1566,6 +1577,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Algorithm ,framework:HEXO</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">wechat</a>
               </li>
              
               <li class="article-tag-list-item">
