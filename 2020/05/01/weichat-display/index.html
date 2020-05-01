@@ -6,15 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | Hexo</title>
+  <title>weichat_display | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/page/2/index.html">
+  <meta name="description" content="微信小程序开发demo介绍:番茄时钟编写语法markdownmarkdown标记语言语法详解请看：菜鸟教程 MarkDown  微信开发文档查看：微信开发 Wechat 说明：  给大家介绍一下一个简单的微信小程序是怎么被我们这些程序猿开发出来的，github上也有很多demo，其实入门非常简单。  开发环境：微信开发工具稳定版，下载最新版最好。非常赞，因为它提供了模拟器还有真机调试，可以实现在电">
+<meta property="og:type" content="article">
+<meta property="og:title" content="weichat_display">
+<meta property="og:url" content="http://yoursite.com/2020/05/01/weichat-display/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="微信小程序开发demo介绍:番茄时钟编写语法markdownmarkdown标记语言语法详解请看：菜鸟教程 MarkDown  微信开发文档查看：微信开发 Wechat 说明：  给大家介绍一下一个简单的微信小程序是怎么被我们这些程序猿开发出来的，github上也有很多demo，其实入门非常简单。  开发环境：微信开发工具稳定版，下载最新版最好。非常赞，因为它提供了模拟器还有真机调试，可以实现在电">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/images/app.json.PNG">
+<meta property="og:image" content="http://yoursite.com/images/index.wxml.PNG">
+<meta property="og:image" content="http://yoursite.com/images/index.wxss.PNG">
+<meta property="og:image" content="http://yoursite.com/images/index.js.PNG">
+<meta property="og:image" content="http://yoursite.com/money.PNG">
+<meta property="article:published_time" content="2020-05-01T09:18:02.000Z">
+<meta property="article:modified_time" content="2020-05-01T10:17:45.974Z">
 <meta property="article:author" content="achxq">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/app.json.PNG">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,106 +160,534 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-weichat-display" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      weichat_display
+    </h1>
+  
+
+        
+        <a href="/2020/05/01/weichat-display/" class="archive-article-date">
+  	<time datetime="2020-05-01T09:18:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-01</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="微信小程序开发demo介绍-番茄时钟"><a href="#微信小程序开发demo介绍-番茄时钟" class="headerlink" title="微信小程序开发demo介绍:番茄时钟"></a>微信小程序开发demo介绍:番茄时钟</h1><h2 id="编写语法markdown"><a href="#编写语法markdown" class="headerlink" title="编写语法markdown"></a>编写语法markdown</h2><h4 id="markdown标记语言语法详解请看："><a href="#markdown标记语言语法详解请看：" class="headerlink" title="markdown标记语言语法详解请看："></a>markdown标记语言语法详解请看：</h4><p>菜鸟教程 <a href="https://www.runoob.com/markdown/md-link.html" target="_blank" rel="noopener">MarkDown</a> </p>
+<h4 id="微信开发文档查看："><a href="#微信开发文档查看：" class="headerlink" title="微信开发文档查看："></a>微信开发文档查看：</h4><p>微信开发 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/api.html" target="_blank" rel="noopener">Wechat</a></p>
+<h3 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h3><p>  给大家介绍一下一个简单的微信小程序是怎么被我们这些程序猿开发出来的，github上也有很多demo，其实入门非常简单。<br>  开发环境：微信开发工具稳定版，下载最新版最好。非常赞，因为它提供了模拟器还有真机调试，可以实现在电脑上编程，在手机上实时模拟。<br>  对于刚刚掌握编程语言的同学，没有其它计算机专业知识的也可以开发出一个简单微信小程序。比如简易计算器，番茄时钟等</p>
+<p>  这里先给出番茄时钟的github项目地址 <a href="https://github.com/kraaas/timer" target="_blank" rel="noopener">番茄时钟</a> 轻量级，对项目环境几乎没有要求，非常适合入门。<br>  我重点讲几个文件作用：</p>
+<h3 id="app-json-整个小程序-软件的配置文件，全局配置，配置可以读取的文件，颜色，导航栏等。小程序也是软件，是一种基于微信平台的特殊软件，轻量级。当用户点击启动时，微信通过链接云端下载该软件的文件包，自动解压运行。非常便利。"><a href="#app-json-整个小程序-软件的配置文件，全局配置，配置可以读取的文件，颜色，导航栏等。小程序也是软件，是一种基于微信平台的特殊软件，轻量级。当用户点击启动时，微信通过链接云端下载该软件的文件包，自动解压运行。非常便利。" class="headerlink" title="app.json 整个小程序 软件的配置文件，全局配置，配置可以读取的文件，颜色，导航栏等。小程序也是软件，是一种基于微信平台的特殊软件，轻量级。当用户点击启动时，微信通过链接云端下载该软件的文件包，自动解压运行。非常便利。"></a>app.json 整个小程序 软件的配置文件，全局配置，配置可以读取的文件，颜色，导航栏等。小程序也是软件，是一种基于微信平台的特殊软件，轻量级。当用户点击启动时，微信通过链接云端下载该软件的文件包，自动解压运行。非常便利。</h3><p><strong><em>程序</em></strong><br>        <img src="/images/app.json.PNG" alt="alt"><br>        {<br>        “pages”: [<br>            “pages/index/index”,<br>            “pages/logs/logs”,<br>            “pages/setting/setting”<br>        ],<br>        “window”: {<br>            “backgroundTextStyle”: “light”,<br>            “navigationBarBackgroundColor”: “#3197ed”,<br>            “navigationBarTitleText”: “”,<br>            “navigationBarTextStyle”: “white”<br>        },<br>        “tabBar”: {<br>            “color”: “#dddddd”,<br>            “selectedColor”: “#3cc51f”,<br>            “borderStyle”: “black”,<br>            “backgroundColor”: “#ffffff”,<br>            “list”: [<br>            {<br>                “pagePath”: “pages/index/index”,<br>                “iconPath”: “image/wechat.png”,<br>                “selectedIconPath”: “image/wechatHL.png”,<br>                “text”: “主页”<br>            },<br>            {<br>                “pagePath”: “pages/logs/logs”,<br>                “iconPath”: “image/wechat.png”,<br>                “selectedIconPath”: “image/wechatHL.png”,<br>                “text”: “记录”<br>            },<br>            {<br>                “pagePath”: “pages/setting/setting”,<br>                “iconPath”: “image/wechat.png”,<br>                “selectedIconPath”: “image/wechatHL.png”,<br>                “text”: “设置”<br>            }<br>            ]<br>        },<br>        “style”:”v2”,<br>        “sitemapLocation”: “sitemap.json”<br>        }</p>
+<h3 id="pages-是小程序功能实现的核心部分-index是最主要的一页。index-wxml-是负责实现小程序index-第一个页面的组件的，比如圆框，数字显示，文字框等。"><a href="#pages-是小程序功能实现的核心部分-index是最主要的一页。index-wxml-是负责实现小程序index-第一个页面的组件的，比如圆框，数字显示，文字框等。" class="headerlink" title="pages 是小程序功能实现的核心部分;index是最主要的一页。index.wxml 是负责实现小程序index 第一个页面的组件的，比如圆框，数字显示，文字框等。"></a>pages 是小程序功能实现的核心部分;index是最主要的一页。index.wxml 是负责实现小程序index 第一个页面的组件的，比如圆框，数字显示，文字框等。</h3><p> <strong><em>程序</em></strong><br> <img src="/images/index.wxml.PNG" alt="alt"><br>            <!-- suggest use the English to notice the meaning --></p>
+<pre><code>&lt;view class=&quot;container timer {{isRuning ? 'timer--runing': ''}}&quot;&gt;
+&lt;!-- the clock main way --&gt;
+    &lt;view class=&quot;timer_main&quot;&gt;
+        &lt;view class=&quot;timer_time-wrap&quot;&gt;
+                &lt;view class=&quot;timer_progress_mask&quot;&gt;&lt;/view&gt;
+                &lt;view class=&quot;timer_progress timer_left&quot;&gt;
+                    &lt;view class=&quot;timer_circle timer_circle--left&quot; style=&quot;transform: rotate({{leftDeg}}deg);&quot;&gt;&lt;/view&gt;
+                &lt;/view&gt;
+                &lt;view class=&quot;timer_progress timer_right&quot;&gt;
+                    &lt;view class=&quot;timer_circle timer_circle--right&quot; style=&quot;transform: rotate({{rightDeg}}deg);&quot;&gt;&lt;/view&gt;
+                &lt;/view&gt;
+                &lt;text wx:if=&quot;{{!completed}}&quot; class=&quot;timer_time&quot;&gt;{{remainTimeText}}&lt;/text&gt;
+                &lt;text 
+                    wx:if=&quot;{{isRuning}}&quot; 
+                    animation=&quot;{{nameAnimation}}&quot; 
+                    class=&quot;timer_taskName&quot;&gt;{{taskName}}{{completed ? '已完成！' : '中'}}&lt;/text&gt;
+                &lt;image 
+                    wx:if=&quot;{{completed}}&quot; 
+                    class=&quot;timer_done&quot; 
+                    src=&quot;../../image/complete.png&quot;&gt;&lt;/image&gt;
+        &lt;/view&gt;
+        &lt;input 
+            type=&quot;text&quot; 
+            placeholder-style=&quot;text-align:center&quot; 
+            class=&quot;timer_inputname&quot; 
+            bindinput=&quot;changeLogName&quot;
+            placeholder=&quot;给您的任务取个名字吧&quot;/&gt;
+    &lt;/view&gt;
+    &lt;!-- the down half view  --&gt;
+    &lt;view class=&quot;timer_footer&quot;&gt;
+    &lt;view 
+        bindtap=&quot;startTimer&quot; 
+        data-type=&quot;work&quot; 
+        class=&quot;timer_ctrl {{isRuning && timerType == 'rest' ? 'hide' : ''}}&quot; &gt;
+    {{isRuning ? '完成': '工作'}}&lt;/view&gt;
+&lt;!-- the way of  count time , --&gt;
+    &lt;view 
+        bindtap=&quot;startTimer&quot; 
+        data-type=&quot;rest&quot; 
+        class=&quot;timer_ctrl {{isRuning && timerType == 'work' ? 'hide' : ''}}&quot; &gt;
+    {{isRuning ? '完成': '休息'}}&lt;/view&gt;
+    &lt;/view&gt;
+&lt;/view&gt;</code></pre><h3 id="index-wxss-负责对组件进行外观渲染，和css语言类似，但是腾讯封装了，更便捷。比如设置颜色，位置等。"><a href="#index-wxss-负责对组件进行外观渲染，和css语言类似，但是腾讯封装了，更便捷。比如设置颜色，位置等。" class="headerlink" title="index.wxss 负责对组件进行外观渲染，和css语言类似，但是腾讯封装了，更便捷。比如设置颜色，位置等。"></a>index.wxss 负责对组件进行外观渲染，和css语言类似，但是腾讯封装了，更便捷。比如设置颜色，位置等。</h3><p><strong><em>程序</em></strong><br> <img src="/images/index.wxss.PNG" alt="alt"></p>
+<pre><code>    /* the whole .container s in a word the disappear */
+.container {
+display: flex;
+height: 100%;
+flex-direction: column;
+overflow: hidden;
+background-color: #fff;
+}
+/* the color of the clock  */
+.timer_main {
+position: relative;
+display: flex;
+flex: 2;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-color:#33FFCC;
+transition: all .5s;
+z-index: 1;
+padding: 10px 0;
+}
+/* the clock circle */
+.timer_time-wrap {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 150px;
+height: 150px;
+text-align: center;
+transition: all .3s;
+}
+
+.timer_progress {
+position: absolute;
+top: 0;
+width: 75px;
+height: 150px;
+overflow: hidden;
+transition: all .3s;
+}
+/*  */
+.timer_progress_mask {
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+border: 3px solid rgb(43, 40, 37);
+opacity: .5;
+border-radius: 50%;
+}
+/* left : */
+.timer_left {
+left: 0;
+}
+
+.timer_right {
+right: 0;
+}
+
+.timer_circle {
+position: absolute;
+top: 0;
+width: 150px;
+height: 150px;
+border: 3px solid transparent;
+border-radius: 50%;
+transition: all .3s;
+}
+
+.timer_circle--left {
+left: 0;
+border-left: 3px solid #fff;
+border-bottom: 3px solid #fff;
+transform: rotate(45deg);
+}
+
+.timer_circle--right {
+right: 0;
+border-right: 3px solid #fff;
+border-bottom: 3px solid #fff;
+transform: rotate(-45deg);
+}
+
+.timer_time-right {}
+
+.timer_time {
+font-size: 40px;
+color: #fff;
+font-weight: lighter;
+transition: font-size .3s;
+}
+
+.timer_taskName {
+position: absolute;
+top: -100px;
+font-size: 14px;
+letter-spacing: 5px;
+color: #fff;
+}
+
+.timer_done {
+width: 64px;
+height: 64px;
+}
+
+.timer_inputname {
+position: absolute;
+bottom: -40px;
+width: 100%;
+text-align: center;
+height: 40px;
+padding-left: 10px;
+border-bottom: 1px solid #f2f2f2;
+color: #999;
+}
+
+.timer_footer {
+display: flex;
+justify-content: center;
+align-items: center;
+flex: 1;
+padding-top: 40px;
+transition: all .3s;
+}
+
+.timer .timer_ctrl {
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-size: 12px;
+color: #fff;
+width: 80px;
+height: 80px;
+margin: 0 20px;
+border-radius: 50%;
+transition: all .7s;
+background-color: #48c23d;
+}
+
+.timer .timer_ctrl text {}
+
+
+/*runing style*/
+
+.timer--runing .timer_main {
+flex: 1;
+}
+
+.timer--runing .timer_time {
+font-size: 45px;
+}
+
+.timer--runing .timer_time-wrap {
+width: 200px;
+height: 200px;
+}
+
+.timer--runing .timer_progress {
+width: 100px;
+height: 200px;
+}
+
+.timer--runing .timer_circle {
+width: 200px;
+height: 200px;
+}
+
+.timer--runing .timer_footer {
+flex: 0;
+position: absolute;
+bottom: 0;
+width: 100%;
+z-index: 10;
+}
+
+.timer--runing .timer_ctrl {
+background-color: #208DEA;
+height: 30px;
+margin-bottom: 30px;
+border: 1px dashed #dedede;
+border-radius: 20px;
+}</code></pre><h3 id="index-js-用javascript编写，功能和Web开发中的js完全同，控制组件数据，比如更新时间，设置时间，设置标题，清除日志等，是软件和网页前端开发的核心！！！"><a href="#index-js-用javascript编写，功能和Web开发中的js完全同，控制组件数据，比如更新时间，设置时间，设置标题，清除日志等，是软件和网页前端开发的核心！！！" class="headerlink" title="index.js  用javascript编写，功能和Web开发中的js完全同，控制组件数据，比如更新时间，设置时间，设置标题，清除日志等，是软件和网页前端开发的核心！！！"></a>index.js  用javascript编写，功能和Web开发中的js完全同，控制组件数据，比如更新时间，设置时间，设置标题，清除日志等，是软件和网页前端开发的核心！！！</h3><p><strong><em>程序</em></strong><br> <img src="/images/index.js.PNG" alt="alt"><br>   // the key is operation js</p>
+<pre><code>const util = require(&apos;../../utils/util.js&apos;)
+const defaultLogName = {
+work: &apos;工作&apos;,
+rest: &apos;休息&apos;
+}
+const actionName = {
+stop: &apos;停止&apos;,
+start: &apos;开始&apos;
+}
+
+const initDeg = {
+left: 45,
+right: -45,
+}
+
+Page({
+
+data: {
+    remainTimeText: &apos;&apos;,
+    timerType: &apos;work&apos;,
+    log: {},
+    completed: false,
+    isRuning: false,
+    leftDeg: initDeg.left,
+    rightDeg: initDeg.right
+},
+
+onShow: function() {
+    if (this.data.isRuning) return
+    let workTime = util.formatTime(wx.getStorageSync(&apos;workTime&apos;), &apos;HH&apos;)
+    let restTime = util.formatTime(wx.getStorageSync(&apos;restTime&apos;), &apos;HH&apos;)
+    this.setData({
+    workTime: workTime,
+    restTime: restTime,
+    remainTimeText: workTime + &apos;:00&apos;
+    })
+},
+
+startTimer: function(e) {
+    let startTime = Date.now()
+    let isRuning = this.data.isRuning
+    let timerType = e.target.dataset.type
+    let showTime = this.data[timerType + &apos;Time&apos;]
+    let keepTime = showTime * 60 * 1000
+    let logName = this.logName || defaultLogName[timerType]
+
+    if (!isRuning) {
+    this.timer = setInterval((function() {
+        this.updateTimer()
+        this.startNameAnimation()
+    }).bind(this), 1000)
+    } else {
+    this.stopTimer()
+    }
+
+    this.setData({
+    isRuning: !isRuning,
+    completed: false,
+    timerType: timerType,
+    remainTimeText: showTime + &apos;:00&apos;,
+    taskName: logName
+    })
+
+    this.data.log = {
+    name: logName,
+    startTime: Date.now(),
+    keepTime: keepTime,
+    endTime: keepTime + startTime,
+    action: actionName[isRuning ? &apos;stop&apos; : &apos;start&apos;],
+    type: timerType
+    }
+
+    this.saveLog(this.data.log)
+},
+
+startNameAnimation: function() {
+    let animation = wx.createAnimation({
+    duration: 450
+    })
+    animation.opacity(0.2).step()
+    animation.opacity(1).step()
+    this.setData({
+    nameAnimation: animation.export()
+    })
+},
+
+stopTimer: function() {
+    // reset circle progress
+    this.setData({
+    leftDeg: initDeg.left,
+    rightDeg: initDeg.right
+    })
+
+    // clear timer
+    this.timer &amp;&amp; clearInterval(this.timer)
+},
+
+updateTimer: function() {
+    let log = this.data.log
+    let now = Date.now()
+    let remainingTime = Math.round((log.endTime - now) / 1000)
+    let H = util.formatTime(Math.floor(remainingTime / (60 * 60)) % 24, &apos;HH&apos;)
+    let M = util.formatTime(Math.floor(remainingTime / (60)) % 60, &apos;MM&apos;)
+    let S = util.formatTime(Math.floor(remainingTime) % 60, &apos;SS&apos;)
+    let halfTime
+
+    // update text
+    if (remainingTime &gt; 0) {
+    let remainTimeText = (H === &quot;00&quot; ? &quot;&quot; : (H + &quot;:&quot;)) + M + &quot;:&quot; + S
+    this.setData({
+        remainTimeText: remainTimeText
+    })
+    } else if (remainingTime == 0) {
+    this.setData({
+        completed: true
+    })
+    this.stopTimer()
+    return
+    }
+
+    // update circle progress
+    halfTime = log.keepTime / 2
+    if ((remainingTime * 1000) &gt; halfTime) {
+    this.setData({
+        leftDeg: initDeg.left - (180 * (now - log.startTime) / halfTime)
+    })
+    } else {
+    this.setData({
+        leftDeg: -135
+    })
+    this.setData({
+        rightDeg: initDeg.right - (180 * (now - (log.startTime + halfTime)) / halfTime)
+    })
+    }
+},
+
+changeLogName: function(e) {
+    this.logName = e.detail.value
+},
+
+saveLog: function(log) {
+    var logs = wx.getStorageSync(&apos;logs&apos;) || []
+    logs.unshift(log)
+    wx.setStorageSync(&apos;logs&apos;, logs)
+}
+})</code></pre><h3 id="小编查了一下淘宝上开发小程序的价格，根据技术难度从100到2000元不等，而这技术难度并不是很大，所以各位加油吧，学了就可以自己接私活了挣零花钱了。"><a href="#小编查了一下淘宝上开发小程序的价格，根据技术难度从100到2000元不等，而这技术难度并不是很大，所以各位加油吧，学了就可以自己接私活了挣零花钱了。" class="headerlink" title="小编查了一下淘宝上开发小程序的价格，根据技术难度从100到2000元不等，而这技术难度并不是很大，所以各位加油吧，学了就可以自己接私活了挣零花钱了。"></a>小编查了一下淘宝上开发小程序的价格，根据技术难度从100到2000元不等，而这技术难度并不是很大，所以各位加油吧，学了就可以自己接私活了挣零花钱了。</h3><p><strong><em>淘宝</em></strong><br> <img src="/money.PNG" alt="alt"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/22/%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E4-10/" class="archive-article-date">
-  	<time datetime="2020-02-22T13:17:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/22/%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E4-10/">编程之美4.10</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/01/weichat-display/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87Hexo%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-01-14T13:23:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-14</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/24/Shannon/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Shannon</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87Hexo%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇Hexo博客文章</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/14/hello-world/" class="archive-article-date">
-  	<time datetime="2020-01-14T13:13:02.744Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/14/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2020/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2020/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -273,8 +711,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
