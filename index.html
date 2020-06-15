@@ -152,6 +152,97 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-计算机怎样跑起来的" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E6%A0%B7%E8%B7%91%E8%B5%B7%E6%9D%A5%E7%9A%84/">计算机怎样跑起来的</a>
+    </h1>
+  
+
+        
+        <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E6%A0%B7%E8%B7%91%E8%B5%B7%E6%9D%A5%E7%9A%84/" class="archive-article-date">
+  	<time datetime="2020-06-15T12:44:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="读《计算机是怎样跑起来的》感悟"><a href="#读《计算机是怎样跑起来的》感悟" class="headerlink" title="读《计算机是怎样跑起来的》感悟"></a>读《计算机是怎样跑起来的》感悟</h1><p>####最近读了《计算机是怎样跑起来的》有了一些感悟，做一些记录。</p>
+<p>   1、关于it和计算机。it是信息技术。本质含义是充分利用信息的技术。计算机是是帮助人类运算的机器。难道说必须要引入计算机才叫it技术？</p>
+<p><strong>==it的本质是信息化，是充分利用信息。==</strong>难道为了实现信息化，就一定要编程？要设计信息系统？一定要计算机吗？</p>
+<p>未必。比如你有很多的书籍，n本。但是你不会随时都用到全部。你的书桌空间有限，书柜很大。自然要分类处理。根据你的需求，可以按照使用频率分，按照用途分，甚至按照你喜爱程度分类等。虽然没有编程，但是你分门别类，已经越来越信息化了。这就属于it。搞It不能把自己的视野搞僵化和狭隘了。如果说书籍太多，使用太频繁。像图书馆，书店那样，人力已经不足，就可以借用计算机来记录统计。但是它只是一个工具。我们的思路和目的仍然不变。</p>
+<p>   2、成功的计算机系统是什么？是使用了很高深的技术？非常漂亮的界面？是自己动手原创？<strong>不，计算机系统是工具，为了帮助用户解决问题。能够帮用户解决问题，稳定高效运行的系统才是符合期望的。</strong>如果无法满足，无论多了华丽，一样无人问津。所以，设计计算机系统时，不要一上来就想着我们要设计，要想象一个多么牛叉的系统，用什么厉害的技术。而是从客户角度想象问题的本质，如果可以用已经存在的设备和软件组合满足需求，就无须自己开发了。这样又快，有减小客户的开销。</p>
+<p>  3、设备利用率的重要性。有的设备，系统虽然功能当时能够跑起来，效果也不错。但是交付以后，却经常维护，升级，导致用户经常不能使用服务，十分让人恼火。就如我们学校的一卡通充值，经常因为系统维护无法充值。对于这种，我们用设备利用率来描述。就是某一个设备正常运转时间/总的时间（正常+维护）。作为客户，当然希望设备和系统正常工作时间越久越好。所以这里在开发时会有很多注意点。</p>
+<p>（1）串联系统加入备份设备，改装为并联系统。就是概率的计算，设备越多，同时坏的概率大大降低。提高设别利用率。</p>
+<p>（2）维护和升级对系统而言无法避免，一定会有代码被修改。所以开发时，尽量面向对象设计，模块化，就是低耦合高内聚。即便某几个地方修改，其余的模块仍能工作，最好。</p>
+<p>  4、关于XML<u>。全称为可扩展的标记语言。标记语言是带有标签的。</u>所以xml也有标签。而他可以扩展是因为他可以自定义新的标签，给了用户最大的自由，可以设计自己的标记语言。</p>
+<p>关于XML的应用。存储互联网网页信息，赋予含义，表会死信息的含义，利用标签反映。</p>
+<p>和csv（逗号分割值）一样是通用的数据交换格式。因为标签有信息含义，所以便于人分析，但是也会更占用空间。存储数据。</p>
+<p>  5、关于加密和解密，密钥，公钥，私钥这些都是人们常常会遇见的信息。来解释一下。</p>
+<p>加密：本质上就是对字符的编码（数字）进行变换。比如做加法，减法，做布尔运算等。这样倘若被中途窃取了，直接打开解析便是乱码。</p>
+<p>解密：对于已经加密的信息，编码数字，按照某种方式再变换，得到明文。</p>
+<p>密钥：用于加密和解密的数字。因为计算机本质上就是数字的各种运算，都是用数字表示的，所以也是用数字加密解密的。</p>
+<p>对称密钥加密技术：若发送者和接受者加密解密的数字完全同，密钥同，则为对称密钥。</p>
+<p>但只是一种想象的技术，没有实用性。比如：你用x加密了消息，发送给了另一个丁，只能有丁知道x。所以你要发送x给他，难道x就不会被盗取？而且，如果你要发1000人，难道1000人也要发x。对方也要获得了x才能解，无法实时的。这种技术必然导致另一方等待发密钥，无法实现现在的机密性试试视频会议。</p>
+<p>公开密钥加密技术：如果发送方的加密密钥公开（公钥），且接收方的解密密钥私有（私钥），则称为公开密钥加密技术。典型代表：<strong>RSA</strong>  <a href="https://www.jianshu.com/p/ff2b538a77e2" target="_blank" rel="noopener"></a> 有兴趣研读一下。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算机科普</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%80%8E%E6%A0%B7%E8%B7%91%E8%B5%B7%E6%9D%A5%E7%9A%84/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-安全系数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1346,118 +1437,6 @@ return 0;
 
 
   
-    <article id="post-lanqiaobei6-7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/01/lanqiaobei6-7/">lanqiaobei6.7</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/01/lanqiaobei6-7/" class="archive-article-date">
-  	<time datetime="2020-03-01T12:18:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="蓝桥杯算法题解第六届第七题-牌型种数"><a href="#蓝桥杯算法题解第六届第七题-牌型种数" class="headerlink" title="蓝桥杯算法题解第六届第七题:牌型种数"></a>蓝桥杯算法题解第六届第七题:牌型种数</h1><h2 id="编写语法markdown"><a href="#编写语法markdown" class="headerlink" title="编写语法markdown"></a>编写语法markdown</h2><p>用c语言编写</p>
-<p>####markdown标记语言语法详解请看：<br>菜鸟教程 <a href="https://www.runoob.com/markdown/md-link.html" target="_blank" rel="noopener">MarkDown</a>  </p>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>牌型种数</p>
-<p>小明被劫持到X赌城，被迫与其他3人玩牌。<br>一副扑克牌（去掉大小王牌，共52张），均匀发给4个人，每个人13张。<br>这时，小明脑子里突然冒出一个问题：<br>如果不考虑花色，只考虑点数，也不考虑自己得到的牌的先后顺序，自己手里能拿到的初始牌型组合一共有多少种呢？</p>
-<p>请填写该整数，不要填写任何多余的内容或说明文字。</p>
-<h4 id="解题思路：先化简，转化为更简单的数学问题："><a href="#解题思路：先化简，转化为更简单的数学问题：" class="headerlink" title="解题思路：先化简，转化为更简单的数学问题："></a>解题思路：先化简，转化为更简单的数学问题：</h4><p><em>组合知识，考察数学的排列组合，但是注意要转换角度，要从每种牌的可能出现次数看，这样相互独立，</em></p>
-<h4 id="第二步：分析逻辑和设计程序流程"><a href="#第二步：分析逻辑和设计程序流程" class="headerlink" title="第二步：分析逻辑和设计程序流程"></a>第二步：分析逻辑和设计程序流程</h4><p><em>根据出现情况有0-4张，所以13种点数的牌，13个循环，范围0-4.详情看代码注释。</em></p>
-<p><strong><em>推荐阅读《编程之美》，激发你对算法的热爱。</em></strong></p>
-<h4 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h4><pre><code>    #include&lt;stdio.h&gt;
-    int main(){
-    long long sum=0;
-    int a[13]={0};
-    //思路类似于电梯调度 《编程之美》 
-    //可以把13种牌当做13个坐电梯的人 计算这13个人可能按电梯的可能，电梯的目标楼层是0-4， 
-    // 每个人都只能有0-4的一种选择，相互独立，但最后结果要满足这个些人的目标楼层数sum==13
-    //按照每种点数牌出现的数量组合，独立好算
-    //如果按照的是 那十三张牌的可能性，一个个组合抽取，会有前后干扰。 
-    for(a[0]=0;a[0]&lt;=4;a[0]++){
-        for(a[1]=0;a[1]&lt;=4;a[1]++){
-        for(a[2]=0;a[2]&lt;=4;a[2]++){
-        for(a[3]=0;a[3]&lt;=4;a[3]++){
-        for(a[4]=0;a[4]&lt;=4;a[4]++){
-        for(a[5]=0;a[5]&lt;=4;a[5]++){
-        for(a[6]=0;a[6]&lt;=4;a[6]++){
-        for(a[7]=0;a[7]&lt;=4;a[7]++){
-        for(a[8]=0;a[8]&lt;=4;a[8]++){
-        for(a[9]=0;a[9]&lt;=4;a[9]++){
-        for(a[10]=0;a[10]&lt;=4;a[10]++){
-        for(a[11]=0;a[11]&lt;=4;a[11]++){
-        for(a[12]=0;a[12]&lt;=4;a[12]++){
-            if(a[0]+a[1]+a[2]+a[3]+a[4]+a[5]+a[6]+a[7]+a[8]+a[9]+a[10]+a[11]+a[12]==13)
-            sum++;
-
-    }
-    }
-    }
-    }
-    }
-    }
-    }
-    }
-    }
-    }
-    }
-    }
-    }
-
-    //3598180种 
-    printf(&quot;共有：%lld\n&quot;,sum);
-}</code></pre><p>欢迎访问我的github地址<a href="https://github.com/achxq" target="_blank" rel="noopener">艾创github</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/01/lanqiaobei6-7/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1567,11 +1546,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">算法，蓝桥杯</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">编程珠玑</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">算法，蓝桥杯</a>
+                <a href="javascript:void(0)" class="js-tag color1">计算机科普</a>
               </li>
             
             <div class="clearfix"></div>
