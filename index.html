@@ -152,6 +152,147 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-leetcode-3等分" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/12/leetcode-3%E7%AD%89%E5%88%86/">leetcode 3等分</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/12/leetcode-3%E7%AD%89%E5%88%86/" class="archive-article-date">
+  	<time datetime="2020-07-12T00:33:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>/*作者 艾创
+* 时间：2020 */
+/*函数 判断数组能否三等分*/
+/*思路：全体求和 除以3 。遍历数组判断；sum%3不能要，counter超3不能要
+*/
+
+import java.util.Scanner;
+
+public class Main {
+
+
+    public static boolean PaDuan(int a[]){
+        int counter=0;
+        int s=0;
+        int sum=0;
+        for(int i:a){
+            sum+=i;
+        }
+        if(sum%3!=0){
+            return  false;
+        }
+        for (int j:a){
+            s+=j;
+            if (s==sum/3){
+                s=0;
+                counter++;
+            }
+        }
+        //sum为0 超过3组不可要
+        return  counter&gt;=3;
+    }
+    /*可以扩展，让用户输入n 分为n等分，给出判断*/
+    public static boolean N_PanDuan(int n,int a[]){
+        int counter=0;
+        int s=0;
+        int sum=0;
+        for(int i:a){
+            sum+=i;
+        }
+        if(sum%n!=0){
+            return  false;
+        }
+        for (int j:a){
+            s+=j;
+            if (s==sum/n){
+                s=0;
+                counter++;
+            }
+        }
+        //sum为0 超过3组不可要
+        return  counter&gt;=n;
+    }
+
+
+    public static void main(String[] args) {
+        int[] a={1,2,3,4,5,6};
+        int []a2={1,2,1,2,1,2};
+        System.out.println(Main.PaDuan(a));
+        System.out.println(Main.PaDuan(a2));
+        System.out.println(&quot;输入n:&quot;);
+        Scanner in=new Scanner(System.in);
+        int n=in.nextInt();
+        System.out.println(n);
+        System.out.println(Main.N_PanDuan(n,a));
+        System.out.println(Main.N_PanDuan(n,a2));
+
+    }
+}
+---</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/12/leetcode-3%E7%AD%89%E5%88%86/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-软件工程基础知识" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1346,122 +1487,6 @@ for(i=0;i&lt;n;i++){
 
 
   
-    <article id="post-lanqiaobei9-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/05/lanqiaobei9-3/">lanqiaobei9.3</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/05/lanqiaobei9-3/" class="archive-article-date">
-  	<time datetime="2020-03-05T00:26:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="蓝桥杯算法题解第九届第三题-乘积尾零"><a href="#蓝桥杯算法题解第九届第三题-乘积尾零" class="headerlink" title="蓝桥杯算法题解第九届第三题:乘积尾零"></a>蓝桥杯算法题解第九届第三题:乘积尾零</h1><h2 id="编写语法markdown"><a href="#编写语法markdown" class="headerlink" title="编写语法markdown"></a>编写语法markdown</h2><p>用c语言编写</p>
-<p>####markdown标记语言语法详解请看：<br>菜鸟教程 <a href="https://www.runoob.com/markdown/md-link.html" target="_blank" rel="noopener">MarkDown</a>  </p>
-<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>标题：乘积尾零</p>
-<p>如下的10行数据，每行有10个整数，请你求出它们的乘积的末尾有多少个零？</p>
-<p>5650 4542 3554 473 946 4114 3871 9073 90 4329<br>2758 7949 6113 5659 5245 7432 3051 4434 6704 3594<br>9937 1173 6866 3397 4759 7557 3070 2287 1453 9899<br>1486 5722 3135 1170 4014 5510 5120 729 2880 9019<br>2049 698 4582 4346 4427 646 9742 7340 1230 7683<br>5693 7015 6887 7381 4172 4341 2909 2027 7355 5649<br>6701 6645 1671 5978 2704 9926 295 3125 3878 6785<br>2066 4247 4800 1578 6652 4616 1113 6205 3264 2915<br>3966 5291 2904 1285 2193 1428 2265 8730 9436 7074<br>689 5510 8243 6114 337 4096 8199 7313 3685 211 </p>
-<p>注意：需要提交的是一个整数，表示末尾零的个数。不要填写任何多余内容。</p>
-<h4 id="解题思路：先化简，转化为更简单的数学问题："><a href="#解题思路：先化简，转化为更简单的数学问题：" class="headerlink" title="解题思路：先化简，转化为更简单的数学问题："></a>解题思路：先化简，转化为更简单的数学问题：</h4><p><em>不能够直接乘，因为会太大了，超过范围溢出，找数学关系简化计算。因为末尾为0，只能是2✖5，一组2✖5就会有一个0，如4✖25=200，两个0，因为分解因数后有两组2✖5.所以数学上就是找出一共有多少个2，5可以组成多少组。可以一个一个找，记录个数。</em></p>
-<h4 id="第二步：分析逻辑和设计程序流程"><a href="#第二步：分析逻辑和设计程序流程" class="headerlink" title="第二步：分析逻辑和设计程序流程"></a>第二步：分析逻辑和设计程序流程</h4><p><em>封装出一个函数，把他专门统计每个数字对应的2，5的个数，并记录。主函数中负责遍历所有数字，最后比较哪个最少，输出。详情看代码注释。</em></p>
-<p><strong><em>推荐阅读《编程之美》，激发你对算法的热爱。</em></strong></p>
-<h4 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h4><pre><code>#include&lt;stdio.h&gt;
-int cnt2=0;
-int cnt5=0;
-//统计一个数字有多少个2 ,5函数
-void add(long x){
-    //保存整数 
-    long t=x;
-    while(x%2==0){
-        x/=2;
-        cnt2++;
-    }
-    while(t%5==0){
-        t/=5;
-    cnt5++;
-    }
-
-}  
-int main(){
-    long a[100]={5650 ,4542 ,3554 ,473 ,946 ,4114 ,3871, 9073 ,90 ,4329, 
-2758, 7949, 6113, 5659, 5245, 7432, 3051, 4434, 6704, 3594, 
-9937 ,1173, 6866, 3397, 4759, 7557, 3070, 2287, 1453, 9899, 
-1486, 5722, 3135, 1170, 4014, 5510 ,5120 ,729 ,2880, 9019, 
-2049, 698, 4582, 4346, 4427, 646 ,9742 ,7340 ,1230, 7683, 
-5693, 7015, 6887, 7381, 4172 ,4341, 2909 ,2027, 7355, 5649, 
-6701, 6645, 1671 ,5978, 2704 ,9926, 295, 3125, 3878, 6785, 
-2066 ,4247, 4800, 1578, 6652 ,4616, 1113, 6205, 3264, 2915, 
-3966, 5291, 2904, 1285, 2193, 1428, 2265 ,8730, 9436 ,7074, 
-689, 5510 ,8243 ,6114 ,337 ,4096 ,8199, 7313, 3685, 211 };
-int i=0;
-long long s=1;    
-    for(i=0;i&lt;99;i++){
-        add(a[i]);
-
-    }
- if(cnt2&gt;cnt5)
-{
-    printf(&quot;num:%d\n&quot;,cnt5);
-}    
-else{
-    printf(&quot;num:%d\n&quot;,cnt2);
-}
-printf(&quot;2的个数：%d\t,5的个数:%d\n&quot;,cnt2,cnt5);
-
-return 0;
-}</code></pre><p><em>结果：31个零。</em><br>欢迎访问我的github地址<a href="https://github.com/achxq" target="_blank" rel="noopener">艾创github</a><br>  <strong>我的个性化头像已经上线，头像是膜拜的大神，通信信息界的爱因斯坦–香农。</strong><br>  <strong>欢迎了解香农，信息论之父，正是他的理论,信息才能用0，1表示，造就了繁荣的互联网世界,一个天才。<a href="https://www.sohu.com/a/258636376_203761" target="_blank" rel="noopener">香农的传奇人生</a></strong><br>  <strong>推荐阅读香农大神的创意思维.(<a href="http://www.360doc.com/content/17/0801/18/2218345_675904597.shtml" target="_blank" rel="noopener">http://www.360doc.com/content/17/0801/18/2218345_675904597.shtml</a>)</strong></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/05/lanqiaobei9-3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1584,6 +1609,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">软件工程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
               </li>
             
             <div class="clearfix"></div>
