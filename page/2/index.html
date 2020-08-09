@@ -152,6 +152,134 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-lanqiaobei9-6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/07/lanqiaobei9-6/">lanqiaobei9.6</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/07/lanqiaobei9-6/" class="archive-article-date">
+  	<time datetime="2020-03-07T02:33:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="蓝桥杯算法题解第九届第六题-递增三元组"><a href="#蓝桥杯算法题解第九届第六题-递增三元组" class="headerlink" title="蓝桥杯算法题解第九届第六题:递增三元组"></a>蓝桥杯算法题解第九届第六题:递增三元组</h1><h2 id="编写语法markdown"><a href="#编写语法markdown" class="headerlink" title="编写语法markdown"></a>编写语法markdown</h2><p>用c语言编写</p>
+<p>####markdown标记语言语法详解请看：<br>菜鸟教程 <a href="https://www.runoob.com/markdown/md-link.html" target="_blank" rel="noopener">MarkDown</a>  </p>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>标题：递增三元组</p>
+<p>给定三个整数数组<br>A = [A1, A2, … AN],<br>B = [B1, B2, … BN],<br>C = [C1, C2, … CN]，<br>请你统计有多少个三元组(i, j, k) 满足：</p>
+<ol>
+<li>1 &lt;= i, j, k &lt;= N  </li>
+<li>Ai &lt; Bj &lt; Ck  </li>
+</ol>
+<p>【输入格式】<br>第一行包含一个整数N。<br>第二行包含N个整数A1, A2, … AN。<br>第三行包含N个整数B1, B2, … BN。<br>第四行包含N个整数C1, C2, … CN。</p>
+<p>对于30%的数据，1 &lt;= N &lt;= 100<br>对于60%的数据，1 &lt;= N &lt;= 1000<br>对于100%的数据，1 &lt;= N &lt;= 100000 0 &lt;= Ai, Bi, Ci &lt;= 100000 </p>
+<p>【输出格式】<br>一个整数表示答案</p>
+<p>【样例输入】<br>3<br>1 1 1<br>2 2 2<br>3 3 3</p>
+<p>【样例输出】<br>27 </p>
+<p>资源约定：<br>峰值内存消耗（含虚拟机） &lt; 256M<br>CPU消耗  &lt; 1000ms</p>
+<p>请严格按要求输出，不要画蛇添足地打印类似：“请您输入…” 的多余内容。</p>
+<p>注意：<br>main函数需要返回0;<br>只使用ANSI C/ANSI C++ 标准;<br>不要调用依赖于编译环境或操作系统的特殊函数。<br>所有依赖的函数必须明确地在源文件中 #include <xxx><br>不能通过工程设置而省略常用头文件。</p>
+<p>提交程序时，注意选择所期望的语言类型和编译器类型。</p>
+<h4 id="解题思路：先化简，转化为更简单的数学问题："><a href="#解题思路：先化简，转化为更简单的数学问题：" class="headerlink" title="解题思路：先化简，转化为更简单的数学问题："></a>解题思路：先化简，转化为更简单的数学问题：</h4><p><em>本题比较简单，三个数字是相互独立的，范围就是各自数组的所有元素，所以用暴力破解，枚举法，三重循环就可以，只要满足大小条件加一种。</em></p>
+<p><strong><em>推荐阅读《编程之美》，激发你对算法的热爱。<a href="https://baike.baidu.com/item/%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E/8523796?fr=aladdin" target="_blank" rel="noopener">简介</a></em></strong></p>
+<h4 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h4><pre><code>#include &lt;stdio.h&gt;
+
+int main(){
+    int a[100000]={0};
+        int b[100000]={0};
+            int c[100000]={0};
+            int cnt=0;
+    int i=0;
+    int j=0;
+    int k=0;
+    int n=0;
+    scanf(&quot;%d&quot;,&amp;n);
+    for(i=0;i&lt;n;i++){
+        scanf(&quot;%d&quot;,&amp;a[i]);
+    }
+    for(i=0;i&lt;n;i++){
+        scanf(&quot;%d&quot;,&amp;b[i]);
+
+    }
+    for(i=0;i&lt;n;i++){
+        scanf(&quot;%d&quot;,&amp;c[i]);
+    }
+
+for(i=0;i&lt;n;i++){
+    for(j=0;j&lt;n;j++){
+        for(k=0;k&lt;n;k++){
+            if(a[i]&lt;b[j]&amp;&amp;b[j]&lt;c[k]){
+                cnt++;
+            }
+        }
+    }
+}
+
+    printf(&quot;%d&quot;,cnt);
+
+}</code></pre><p>欢迎访问我的github地址<a href="https://github.com/achxq" target="_blank" rel="noopener">艾创github</a><br>  <strong>我的个性化头像已经上线，头像是膜拜的大神，通信信息界的爱因斯坦–香农。</strong><br>  <strong>欢迎了解香农，信息论之父，正是他的理论,信息才能用0，1表示，造就了繁荣的互联网世界,一个天才。<a href="https://www.sohu.com/a/258636376_203761" target="_blank" rel="noopener">香农的传奇人生</a></strong><br>  <strong>推荐阅读香农大神的创意思维.(<a href="http://www.360doc.com/content/17/0801/18/2218345_675904597.shtml" target="_blank" rel="noopener">http://www.360doc.com/content/17/0801/18/2218345_675904597.shtml</a>)</strong></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Algorithm ,framework:HEXO</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/07/lanqiaobei9-6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-lanqiaobei9-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -837,7 +965,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Algorithm ,framework:HEXO</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">校招</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -858,10 +994,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">软件工程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
               </li>
             
             <div class="clearfix"></div>
