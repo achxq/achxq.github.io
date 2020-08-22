@@ -152,6 +152,92 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-链表删除" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/22/%E9%93%BE%E8%A1%A8%E5%88%A0%E9%99%A4/">链表删除</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/22/%E9%93%BE%E8%A1%A8%E5%88%A0%E9%99%A4/" class="archive-article-date">
+  	<time datetime="2020-08-22T11:40:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点。传入函数的唯一参数为 要被删除的节点 。<br>输入：head = [4,5,1,9], node = 5<br>输出：[4,1,9]<br>解释：给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 1 -&gt; 9.</p>
+<p>c:<br>    /<em>*<br>    * Definition for singly-linked list.<br>    * struct ListNode {<br>    *     int val;<br>    *     struct ListNode *next;<br>    * };<br>    */<br>    void deleteNode(struct ListNode</em> node) {<br>        node-&gt;val=node-&gt;next-&gt;val;<br>        node-&gt;next=node-&gt;next-&gt;next;<br>    }<br>性能：4ms 内存：5.9MB<br>java:</p>
+<pre><code>/**
+* Definition for singly-linked list.
+* struct ListNode {
+*     int val;
+*     struct ListNode *next;
+* };
+*/
+void deleteNode(struct ListNode* node) {
+    node-&gt;val=node-&gt;next-&gt;val;
+    node-&gt;next=node-&gt;next-&gt;next;
+}</code></pre><p>性能：0ms  内存：39.4MB  非常费内存</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">LeetCode 数据结构与算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/22/%E9%93%BE%E8%A1%A8%E5%88%A0%E9%99%A4/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-某团笔试总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1377,68 +1463,6 @@ int main(){
 
 
   
-    <article id="post-蓝桥杯第五届第一题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%AC%AC%E4%BA%94%E5%B1%8A%E7%AC%AC%E4%B8%80%E9%A2%98/">&#39;蓝桥杯第五届第一题&#39;</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%AC%AC%E4%BA%94%E5%B1%8A%E7%AC%AC%E4%B8%80%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-03-21T01:47:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%AC%AC%E4%BA%94%E5%B1%8A%E7%AC%AC%E4%B8%80%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1540,19 +1564,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Algorithm ,framework:HEXO</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">校招</a>
+                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">wechat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">校招</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1569,6 +1593,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">软件工程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">LeetCode 数据结构与算法</a>
               </li>
             
             <div class="clearfix"></div>
