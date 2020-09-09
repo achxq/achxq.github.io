@@ -152,6 +152,111 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-蓝桥杯第五届第二题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/23/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%AC%AC%E4%BA%94%E5%B1%8A%E7%AC%AC%E4%BA%8C%E9%A2%98/">蓝桥杯第五届第二题</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/23/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%AC%AC%E4%BA%94%E5%B1%8A%E7%AC%AC%E4%BA%8C%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2020-03-23T08:29:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="蓝桥杯算法题解第五届第2题-调和级数"><a href="#蓝桥杯算法题解第五届第2题-调和级数" class="headerlink" title="蓝桥杯算法题解第五届第2题:调和级数"></a>蓝桥杯算法题解第五届第2题:调和级数</h1><h2 id="编写语法markdown"><a href="#编写语法markdown" class="headerlink" title="编写语法markdown"></a>编写语法markdown</h2><p>用c语言编写</p>
+<p>####markdown标记语言语法详解请看：<br>菜鸟教程 <a href="https://www.runoob.com/markdown/md-link.html" target="_blank" rel="noopener">MarkDown</a>  </p>
+<h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>1/1 + 1/2 + 1/3 + 1/4 + … 在数学上称为调和级数。</p>
+<p>它是发散的，也就是说，只要加上足够多的项，就可以得到任意大的数字。</p>
+<p>但是，它发散的很慢：</p>
+<p>前1项和达到 1.0<br>前4项和才超过 2.0<br>前83项的和才超过 5.0</p>
+<p>那么，请你计算一下，要加多少项，才能使得和达到或超过 15.0 呢？</p>
+<p>请填写这个整数。</p>
+<p>注意：只需要填写一个整数，不要填写任何多余的内容。比如说明文字。</p>
+<p>最好的方法：显然是直接用数学公式，列出方程，给出结果，<br>或者差一点：计算之间关系。</p>
+<h4 id="解题思路：先化简，转化为更简单的数学问题："><a href="#解题思路：先化简，转化为更简单的数学问题：" class="headerlink" title="解题思路：先化简，转化为更简单的数学问题："></a>解题思路：先化简，转化为更简单的数学问题：</h4><p><em>注意：本地并没有明显的数学公式可以做到在O(1)就算出结果，对于调和级数，他是发散的，无法收敛。所以没法做直接求得，只能暴力法。</em><br>*推荐阅读：调和级数：<a href="https://baike.baidu.com/item/%E8%B0%83%E5%92%8C%E7%BA%A7%E6%95%B0/8019971?fr=aladdin" target="_blank" rel="noopener">1+1/2+1/3+1/4+…..+1/n</a></p>
+<h4 id="第二步：分析逻辑和设计程序流程"><a href="#第二步：分析逻辑和设计程序流程" class="headerlink" title="第二步：分析逻辑和设计程序流程"></a>第二步：分析逻辑和设计程序流程</h4><p><em>很简单，不断迭代，逼近15，即使是计算机也会花费好一段时间。</em></p>
+<p><strong><em>推荐阅读《编程之美》，激发你对算法的热爱。</em></strong></p>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;math.h&gt;
+int main(){
+    double sum=0;
+    double i=0;
+
+    while(sum&lt;15.0){
+            i++;//这样充分保证 最后退出时 i就是n的值，不要放在后面（会多1） 
+        sum=sum+1/i;
+    printf(&quot;%.4lf\t&quot;,sum);
+
+    }
+    printf(&quot;%.6lf\n&quot;,sum);
+    printf(&quot;%lf&quot;,i);
+    //这是欧拉常数，近视解法，不推荐，因为比赛时，肯定没人能记住，涉及到了无穷级数的概念。
+    printf(&quot;大小：%lf\n&quot;,exp(14.4228));
+    return 0;
+} </code></pre><p><img src="/images/5.2PNG.PNG" alt="alt"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">算法，蓝桥杯</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/23/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%AC%AC%E4%BA%94%E5%B1%8A%E7%AC%AC%E4%BA%8C%E9%A2%98/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-蓝桥杯第五届第一题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1027,6 +1132,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">大厂面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Algorithm ,framework:HEXO</a>
               </li>
              
@@ -1035,19 +1144,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">wechat</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">校招</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">算法，蓝桥杯</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">wechat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">编程珠玑</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">校招</a>
               </li>
              
               <li class="article-tag-list-item">
